@@ -19,7 +19,7 @@ Now run this to find the mac address of the amazon-dash:
 ```
 $ while [ true ];do arp-scan --localnet -O ieee-oui.txt | grep 'Amazon'; done
 ```
-<sub>There is definitely a better way to do this without having to install a package.</sub>
+<sub>There is definitely a better way to do this without having to install a package. You can now delete ieee-oui.txt `rm ieee-oui.txt`</sub>
 
 Now click the amazon-dash button. And the MAC address should appear.
 
