@@ -29,7 +29,7 @@ Now you should:
 This should output the `MAC` address of the amazon-dash. `ctrl-c` to exit loop. And you can now `$ rm ieee-oui.txt`.
 
 
-IMAGE
+<img src="https://i.imgur.com/UCZXIcc.png">
 
 ### Using amazon-bash.sh
 
