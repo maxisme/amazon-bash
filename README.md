@@ -10,7 +10,7 @@ When you receive your brand spanking new amazon-dash button set it up using the 
  - Select "Dash Button" and follow the instructions until you are prompted to select a product - **Do not select a product**.
 
 ### Finding the MAC address of the amazon-dash button
-First we need to update the OUI - _organizationally unique identifier is a 24-bit number that uniquely identifies a vendor, manufacturer, or other organization by their MAC address_
+First we need to update the OUI _(Organizationally Unique Identifier)_ - _a 24-bit number that uniquely identifies a vendor, manufacturer, or other organization by their MAC address_
 
 ```
 $ wget https://raw.githubusercontent.com/maxisme/amazon-bash/master/ieee-oui.txt
