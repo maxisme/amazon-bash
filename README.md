@@ -17,7 +17,7 @@ $ wget https://raw.githubusercontent.com/maxisme/amazon-bash/master/ieee-oui.txt
 ```
 
 Now you should:
-- Run this
+- Run this as root
 
   ```
   $ while :; do arp-scan --localnet -O ieee-oui.txt | grep 'Amazon'; done
