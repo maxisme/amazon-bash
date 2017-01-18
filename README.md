@@ -13,19 +13,27 @@ First we need to update the OUI - _organizationally unique identifier is a 24-bi
 $ wget https://raw.githubusercontent.com/maxisme/amazon-bash/master/ieee-oui.txt
 ```
 
+Now you should:
+- Run this
 
-Now run this to find the mac address of the amazon-dash:
+  ```
+  $ while [ true ]; do arp-scan --localnet -O ieee-oui.txt | grep 'Amazon'; done
+  ```
+<sub>There is definitely a better way to do this without having to install a package.</sub><br>
 
-```
-$ while [ true ]; do arp-scan --localnet -O ieee-oui.txt | grep 'Amazon'; done
-```
-<sub>There is definitely a better way to do this without having to install a package. You can now delete *ieee-oui.txt* `$ rm ieee-oui.txt`</sub>
+- Click the amazon-dash button.
 
-Now click the amazon-dash button. And the MAC address should appear.
+This should output your `MAC` address. `ctrl-c` to exit loop. And you can now `$ rm ieee-oui.txt`.
+
+
+
 
 IMAGE
 
 ### Using amazon-bash
 
-You can use either `amazon-bash.sh` or `amazon-bash-wifi.sh`.<br>
-`amazon-bash.sh` is for use when you do not have a wifi dongle and `amazon-bash-wifi.sh` is for when you do (the latter has a lot faster reaction speed).
+You can use either `amazon-bash.sh` or `amazon-bash-wifi.sh`:
+- `amazon-bash.sh` is for use when you **do not** have a wifi dongle.
+- `amazon-bash-wifi.sh` is for when you do (the latter has a lot faster reaction speed). This method also requires that you install `aircrack-ng`.
+
+Within the scripts you need to update the `MAC` variable to the one we found earlier.
