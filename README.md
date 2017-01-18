@@ -17,9 +17,9 @@ $ wget https://raw.githubusercontent.com/maxisme/amazon-bash/master/ieee-oui.txt
 Now run this to find the mac address of the amazon-dash:
 
 ```
-$ while [ true ];do arp-scan --localnet -O ieee-oui.txt | grep 'Amazon'; done
+$ while [ true ]; do arp-scan --localnet -O ieee-oui.txt | grep 'Amazon'; done
 ```
-<sub>There is definitely a better way to do this without having to install a package. You can now delete ieee-oui.txt `rm ieee-oui.txt`</sub>
+<sub>There is definitely a better way to do this without having to install a package. You can now delete *ieee-oui.txt* `$ rm ieee-oui.txt`</sub>
 
 Now click the amazon-dash button. And the MAC address should appear.
 
@@ -27,5 +27,5 @@ IMAGE
 
 ### Using amazon-bash
 
-You can use either `amazon-bash.sh` or `amazon-bash-wifi.sh`
+You can use either `amazon-bash.sh` or `amazon-bash-wifi.sh`.<br>
 `amazon-bash.sh` is for use when you do not have a wifi dongle and `amazon-bash-wifi.sh` is for when you do (the latter has a lot faster reaction speed).
