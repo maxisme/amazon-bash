@@ -7,7 +7,7 @@ When you receive your brand spanking new amazon-dash button set it up using the 
 On the app go to Your Account -> Set up a new device. Select "Dash Button" and follow the instructions until you are prompted to select a product - **Do not select a product**.
 
 ### Finding the mac address of the amazon-dash button
-First we need to update the OUI - _organizationally unique identifier is a 24-bit number that uniquely identifies a vendor, manufacturer, or other organization._
+First we need to update the OUI - _organizationally unique identifier is a 24-bit number that uniquely identifies a vendor, manufacturer, or other organization by their MAC address_
 
 ```
 $ wget https://raw.githubusercontent.com/maxisme/amazon-bash/master/ieee-oui.txt
@@ -23,14 +23,14 @@ Now you should:
 
 - Click the amazon-dash button.
 
-This should output your `MAC` address. `ctrl-c` to exit loop. And you can now `$ rm ieee-oui.txt`.
+This should output the `MAC` address of the amazon-dash. `ctrl-c` to exit loop. And you can now `$ rm ieee-oui.txt`.
 
 
 
 
 IMAGE
 
-### Using amazon-bash
+### Using amazon-bash.sh
 
 You can use either `amazon-bash.sh` or `amazon-bash-wifi.sh`:
 - `amazon-bash.sh` is for use when you **do not** have a wifi dongle.
