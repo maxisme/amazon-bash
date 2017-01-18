@@ -20,7 +20,7 @@ Now you should:
 - Run this
 
   ```
-  $ while [ true ]; do arp-scan --localnet -O ieee-oui.txt | grep 'Amazon'; done
+  $ while :; do arp-scan --localnet -O ieee-oui.txt | grep 'Amazon'; done
   ```
 <sub>There is definitely a better way to do this without having to install a package.</sub><br>
 
