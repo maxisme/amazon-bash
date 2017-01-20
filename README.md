@@ -1,6 +1,7 @@
 # Amazon-~~D~~Bash
 [![Build Status](https://travis-ci.org/maxisme/amazon-bash.svg?branch=master)](https://travis-ci.org/maxisme/amazon-bash)
 
+This script will execute around 2-3 seconds after the click vs the nodejs alternative that are called when the button flashes red (about 10 seconds after being clicked). It is also extremely light weight as most linux distros have the packages installed already vs nodejs which is a huge library.
 ## Instructions
 
 ### Amazon app
@@ -22,14 +23,13 @@ Now you should:
   ```
   $ while :; do arp-scan --localnet -O ieee-oui.txt | grep 'Amazon'; done
   ```
-<sub>There is definitely a better way to do this without having to install a package.</sub><br>
 
 - Click the amazon-dash button.
 
-This should output the `MAC` address of the amazon-dash. `ctrl-c` to exit loop. And you can now `$ rm ieee-oui.txt`.
-
-
 <img src="https://i.imgur.com/UCZXIcc.png">
+
+This should output the `MAC` address (50:f5:da:6a:f3:2c) of the amazon-dash. `ctrl-c` to exit loop. And you can now `$ rm ieee-oui.txt`.
+
 
 ### Using amazon-bash.sh
 
@@ -38,3 +38,15 @@ You can use either `amazon-bash.sh` or `amazon-bash-wifi.sh`:
 - `amazon-bash-wifi.sh` is for when you do (the latter has a lot faster reaction speed). This method also requires that you install `aircrack-ng`.
 
 Within the scripts you need to update the `MAC` variable to the one we found earlier.
+
+Also a reminder that if you want this script to run permanently add:
+
+>@reboot /path/to/amazon-bash-wifi.sh
+
+to `$ crontab -e`
+
+and
+
+```
+$ chmod +x /path/to/amazon-bash-wifi.sh
+```
