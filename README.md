@@ -24,9 +24,9 @@ Now you should:
   $ while :; do arp-scan --localnet -O ieee-oui.txt | grep 'Amazon'; done
   ```
 
-- Click the amazon-dash button.
+- Click the Dash Button.
 
-  This should output the `MAC` address (in my case: *50:f5:da:6a:f3:2c*) of the amazon-dash.
+  This should output the `MAC` address (in my case: *50:f5:da:6a:f3:2c*) of the Dash.
   <img src="https://i.imgur.com/UCZXIcc.png">
 - `ctrl-c` to exit loop.
 - `rm ieee-oui.txt` to delete the list.
@@ -39,6 +39,11 @@ You can use either `amazon-bash.sh` or `amazon-bash-wifi.sh`:
 - `amazon-bash-wifi.sh` is for when you do (the latter has a lot faster reaction speed). This method also requires that you install `aircrack-ng`.
 
 Within the scripts you need to update the `MAC` variable to the one we found earlier.
+
+And also you need to update the `onClick` function to include what you want to happen on the click. Some ideas:
+
+ - Use [Notifi](https://github.com/maxisme/notifi) to send you a push notification.
+ - Run a [slack script](https://api.slack.com/incoming-webhooks).
 
 Also a reminder that if you want this script to run permanently:
  1. Make the script executable `chmod +x /path/to/amazon-bash-wifi.sh`
