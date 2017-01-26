@@ -14,7 +14,7 @@ When you receive your brand spanking new amazon-dash button set it up using the 
 First we need to update the OUI _(Organizationally Unique Identifier)_ - _a 24-bit number that uniquely identifies a vendor, manufacturer, or other organization by their MAC address_
 
 ```
-$ wget https://raw.githubusercontent.com/maxisme/amazon-bash/master/ieee-oui.txt
+wget https://raw.githubusercontent.com/maxisme/amazon-bash/master/ieee-oui.txt
 ```
 
 Now you should:
@@ -28,7 +28,7 @@ Now you should:
 
 <img src="https://i.imgur.com/UCZXIcc.png">
 
-This should output the `MAC` address (50:f5:da:6a:f3:2c) of the amazon-dash. `ctrl-c` to exit loop. And you can now `$ rm ieee-oui.txt`.
+This should output the `MAC` address (in my case: *50:f5:da:6a:f3:2c*) of the amazon-dash. `ctrl-c` to exit loop. And you can now `rm ieee-oui.txt`.
 
 
 ### Using amazon-bash.sh
@@ -39,14 +39,9 @@ You can use either `amazon-bash.sh` or `amazon-bash-wifi.sh`:
 
 Within the scripts you need to update the `MAC` variable to the one we found earlier.
 
-Also a reminder that if you want this script to run permanently add:
+Also a reminder that if you want this script to run permanently:
+ 1. Make the script executable `chmod +x /path/to/amazon-bash-wifi.sh`
+ 2. Add *@reboot /path/to/amazon-bash-wifi.sh* to your crontab
 
->@reboot /path/to/amazon-bash-wifi.sh
-
-to `$ crontab -e`
-
-and
-
-```
-$ chmod +x /path/to/amazon-bash-wifi.sh
-```
+# My weird purchase of a Dash Button
+I bought a [Dash Button](https://www.amazon.co.uk/b?ie=UTF8&node=10833773031) for £4.99 not knowing that you were limited to the product the sticker shows (I bought it judging on the best available logo, which turned out to be [Ariel](https://www.amazon.co.uk/gp/product/B01I29J290/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)). As I am a student I cannot actually afford the luxury of *Ariel washing capsules* but on the other hand as I am a **Computer Science** Student I could have done with [Listerine](https://www.amazon.co.uk/Amazon-JK29LP-Listerine-Dash-Button/dp/B01I29BJTQ/ref=pd_sim_570_8?_encoding=UTF8&psc=1&refRID=2FYAWEHFRTBMTR5MZRYP). Any way I [told this to amazon](https://www.amazon.co.uk/gp/help/contact-us/general-questions.html) who refunded me the whole £4.99 immediately and when I asked if I needed to do anything more they said no. So now I have a free doorbell. Thank you Amazon.
